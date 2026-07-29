@@ -1,11 +1,16 @@
 package config;
 
+import org.openqa.selenium.WebDriver;
+
+import factory.DriverFactory;
+
 public class TestConfigReader {
 
 	public static void main(String[] args) {
-		
-		System.out.println(ConfigReader.getInstance().getUrl());
-        System.out.println(ConfigReader.getInstance().getBrowser());
+        WebDriver driver = DriverFactory.initDriver("chrome");
+        driver.get("https://opensource-demo.orangehrmlive.com");
+        System.out.println(driver.getTitle());
+        driver.quit();
 
 	}
 

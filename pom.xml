@@ -3,4 +3,11 @@
   <groupId>com.orangehrm</groupId>
   <artifactId>orangehrm-automation-framework</artifactId>
   <version>1.0.0</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>Test</groupId>
+  		<artifactId>AutomationJavaSelenium</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
