@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class SeleniumActions {
 	
@@ -52,6 +53,15 @@ public class SeleniumActions {
         By locator = getBy(element);
         waitForElement(driver, locator);
         driver.findElement(locator).sendKeys(text);
+    }
+    
+    public static void verifyAssert(WebDriver driver,LookupDetails element,String expected)
+    {
+    	By locator = getBy(element);
+    	waitForElement(driver, locator);
+    	String actual = driver.findElement(locator).getText();
+    	Assert.assertEquals(actual, expected, "expected text is not found and login failed");
+    	
     }
 
 }

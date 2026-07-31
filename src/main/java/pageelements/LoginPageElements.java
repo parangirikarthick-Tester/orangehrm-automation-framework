@@ -7,6 +7,7 @@ public enum LoginPageElements implements LookupDetails {
 	USERNAME("xpath", "//input[@name='username' and @placeholder='Username']"),
 	PASSWORD("xpath", "//input[@name='password' or @type='password']"),
 	LOGIN_BUTTON("xpath", "//button[@type='submit']"),
+	DASHBOARD_TEXT("xpath", "//h6[text() = 'Dashboard']"),
 	
 	;
 	
